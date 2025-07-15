@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "d440bf73-423a-4da3-ac99-0c077c05fdb0",
+		"name": "Capace",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30109597"
+	},
+	"item": [
+		{
+			"name": "JobPost",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Backend Developer\",\r\n    \"description\":\"Python developer with PostgresSQl and Django Rest Framework\",\r\n    \"location\":\"Bengaluru\",\r\n    \"posted_by\":\"Capace\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/JobView/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"JobView",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ViewJobs",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/v1/GetJob/?job_id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"GetJob",
+						""
+					],
+					"query": [
+						{
+							"key": "job_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateApplication",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"GuruH\",\r\n    \"email\":\"guruputtu03@gmail.com\",\r\n    \"resume_link\":\"https://www.linkedin.com/in/guru-h-48624a208\",\r\n    \"applied_job\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/CreateApplication/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"CreateApplication",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetApplication",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/GetApplication/?applicant_id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"GetApplication",
+						""
+					],
+					"query": [
+						{
+							"key": "applicant_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListApplicantsSorted",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/v1/ListApplicants/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"ListApplicants",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
